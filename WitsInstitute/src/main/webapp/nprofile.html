@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body { background-image:url('https://images.rawpixel.com/image_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA4L3Y4ODItYWV3LTUyLmpwZw.jpg');
+       background-repeat: no-repeat;
+	   background-attachment: fixed;
+	   background-size: 100% 100%;
+     
+			font-family:'verdana';
+		}
+		.id-card-holder {
+			width: 225px;
+		    padding: 4px;
+		    margin: 0 auto;
+		    background-color: #1f1f1f;
+		    border-radius: 5px;
+		    position: relative;
+		}
+		.id-card-holder:after {
+		    content: '';
+		    width: 7px;
+		    display: block;
+		    background-color: #0a0a0a;
+		    height: 100px;
+		    position: absolute;
+		    top: 105px;
+		    border-radius: 0 5px 5px 0;
+		}
+		.id-card-holder:before {
+		    content: '';
+		    width: 7px;
+		    display: block;
+		    background-color: #0a0a0a;
+		    height: 100px;
+		    position: absolute;
+		    top: 105px;
+		    left: 222px;
+		    border-radius: 5px 0 0 5px;
+		}
+		.id-card {
+			
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			text-align: center;
+			box-shadow: 0 0 1.5px 0px #b9b9b9;
+		}
+		.id-card img {
+			margin: 0 auto;
+		}
+		.header img {
+			width: 100px;
+    		margin-top: 15px;
+		}
+		.photo img {
+			width: 80px;
+    		margin-top: 15px;
+		}
+		h2 {
+			font-size: 15px;
+			margin: 5px 0;
+		}
+		h3 {
+			font-size: 12px;
+			margin: 2.5px 0;
+			font-weight: 300;
+		}
+		.qr-code img {
+			width: 50px;
+		}
+		p {
+			font-size: 5px;
+			margin: 2px;
+		}
+		.id-card-hook {
+			background-color: #000;
+		    width: 70px;
+		    margin: 0 auto;
+		    height: 15px;
+		    border-radius: 5px 5px 0 0;
+		}
+		.id-card-hook:after {
+			content: '';
+		    background-color: #d7d6d3;
+		    width: 47px;
+		    height: 6px;
+		    display: block;
+		    margin: 0px auto;
+		    position: relative;
+		    top: 6px;
+		    border-radius: 4px;
+		}
+		.id-card-tag-strip {
+			width: 45px;
+		    height: 40px;
+		    background-color: #0950ef;
+		    margin: 0 auto;
+		    border-radius: 5px;
+		    position: relative;
+		    top: 9px;
+		    z-index: 1;
+		    border: 1px solid #0041ad;
+		}
+		.id-card-tag-strip:after {
+			content: '';
+		    display: block;
+		    width: 100%;
+		    height: 1px;
+		    background-color: #c1c1c1;
+		    position: relative;
+		    top: 10px;
+		}
+		.id-card-tag {
+			width: 0;
+			height: 0;
+			border-left: 100px solid transparent;
+			border-right: 100px solid transparent;
+			border-top: 100px solid #0958db;
+			margin: -10px auto -30px auto;
+		}
+		.id-card-tag:after {
+			content: '';
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    border-left: 50px solid transparent;
+		    border-right: 50px solid transparent;
+		    border-top: 100px solid #d7d6d3;
+		    margin: -10px auto -30px auto;
+		    position: relative;
+		    top: -130px;
+		    left: -50px;
+		}
+
+</style>
+</head>
+<body>
+<div class="id-card-tag"></div>
+	<div class="id-card-tag-strip"></div>
+	<div class="id-card-hook"></div>
+	<div class="id-card-holder">
+		<div class="id-card">
+			<div class="header">
+			<img src="https://lh3.googleusercontent.com/OM4fhCiu7ojM5GpdPx7c9_JSrX8uQGZ2fG8GDzHBlyuTmaOcOv6TkMhOLNCTSwmnDrhkBLZ6IMpqcKF8zqLMdOQkNkUJs0a_o3fQRh_EIwpi06QqvdA12qlpHEJQg75B1KgusWweZHO21vSs6_smfh3KFH76mLS3OuQoLEJ3eqQTJGYd9SEhF3ygijg-U1-Kf3a3q4pbTvZeO_bZ_z3DSW6HhkaMS4PnlxP36ANY7LK6SOFZ3iysBYiBPJBWbd5wx3Nd-hBsugzd_mYaeSvwpqgCQmH_n75HUqa2qgSfmVYYgSxnpqxwwm_-JukaEML9Ty3-vZTwwgq-_aC_3DuomrjxkShQb8bcu7oW7JQoJQr36EX0KQQMZ-G0WlAMid06fJN8l7kW97zyvZzDVLfBaDjLPw-QFWFYx_rdNf62mL4VunPs96SbMgJeymi01D1n7bYsBYukb4jWuagkIAYr5D2yxPuTxyubJPXkLjijrOMnJZRGOJecx1UG4K6Pxq65ShN2UuAwDlftksZ143rz2PvMEIUaBHGnvnOOHZlncKlnbDfsYikaOzb3qusbZ6T2bhUXDiXE2rR0y2BpFORNF_2cn8wnUQOBS-yGvguWosDbNFakE-GSLzRh_u1ysUYbQAgx05g_Iaaw9ZFSJO-Nx_Zs31MXBqMEV636A0XyejFe_Bp9ijyy5_5ONf1c5wC0iGqgu_rqqBRbdli4bEjDyEn2NpYBxbR_PXb4dowmvxP-pCpL60KZq8m0wEaDhpvuAtAVE4BMqyeMNYs6yammvRjUEeUJEXCHOpWDLqh6hiqeJex3GZgXriy7GP35IFbf18Rc_U6YnCDZMmSVq9BVz1P0I4aVidXqaQmoBKTIl_zSD1jAiFx7BSIhDod-_KCVKENuSm76ybjXwRjivBnKZKDHFdFZ0o39xMRHyqKADfYuHCL3=w528-h883-no?authuser=0">
+			
+			</div>
+			<div class="photo">
+				<img src="">
+			</div>
+			<h2>Shashank Sir</h2>
+			<div class="qr-code">
+			</div>
+			<h3>www.Wits.edu</h3>
+			<hr>
+			<p><strong>"Muz"</strong>HOUSE,ground Floor, TC 11/729(4), Maripur Road <p>
+			<p>Near Maripur, Muzaffarpur,Bihar India <strong>842001</strong></p>
+			<p>Ph: 9304127277  | E-mail: Wits@6565.info</p>
+
+		</div>
+	</div>
+</body>
+</html>
