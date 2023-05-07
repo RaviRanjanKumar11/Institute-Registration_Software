@@ -1,0 +1,114 @@
+ <!-- example on JS objects -->
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="icon" href="https://e0.pxfuel.com/wallpapers/583/132/desktop-wallpaper-medical-logos-doctor-symbol.jpg">
+   <meta charset="UTF-8">
+   <title>Objects</title>
+   <style>
+
+   div{
+   text-align:center;
+        height:550px;
+		width:500px;
+		 background:cyan;
+	  margin:none;
+	  border: 3px outset blue;
+	border-radius:50px; 
+	 box-shadow:1px 1px 1px;
+	  padding:5px;
+	  opacity:0.9;
+	  }
+	  button{
+	         background:red;
+			 float:middle;
+			 color:white;
+			 }
+
+			 body{
+       background-image: url('https://thumbs.dreamstime.com/b/hospital-bill-hypothetical-syringe-medication-document-created-photographer-79764381.jpg');
+       background-repeat: no-repeat;
+	   background-attachment: fixed;
+	   background-size: 100% 100%;
+        }
+		input{
+	        border:none;
+			outline:none;
+			background:#66ffff;
+			border-bottom:4px solid red;
+			}
+			i{
+			color:red;
+			}
+			#ik{
+			color:cyan;
+			}
+
+   </style>
+ </head>
+ <body>
+ <center>
+ 
+ <div style="align:center; border-top:10px solid #ff0000;" >
+ <center>
+ <a href="login.html"><i class="fa fa-home fa-beat" style="--fa-beat-scale: 2.5;"  aria-hidden="true"></i></a>
+	<marquee><h3 style="color:green;"><i class="fas fa-clinic-medical"></i>-Medical Bill Generate-<i class="fas fa-clinic-medical"></i></h3></marquee><br>
+	 &nbsp   &nbsp <input type="text" id="pname" placeholder="       Medicine Name" required/>
+	&nbsp;&nbsp;<br><br>
+	&nbsp; &nbsp; <input type="text" id="qty" placeholder="   No.of dedicine/Quantity" />
+	&nbsp;&nbsp;<br> <br>
+	<input type="text" id="price" placeholder="        Medicine Price"/><br>
+	<button id="bt1"><i class="fa-sharp fa-solid fa-plus" id="ik"></i></button> &nbsp;&nbsp;
+	<button id="bt2"><i class="fa-solid fa-list-ul" id="ik"></i></button><br>
+	<strong><lable><i class="fa-solid fa-phone fa-shake"></i>+916200771962</lable></strong><br> 
+	<i class="fa-solid fa-envelope fa-beat"></i><b><label>golu12827@gmail.com</label></b>
+  <font size="35px" color="green"></font>
+  
+	<script>
+		//global dec
+		const products = new Array();
+		var index=0;
+		function Product(pname,qty,price)
+		{  
+			//prop init
+			this.pname=pname;
+			this.qty=qty;
+			this.price=price;
+		}
+
+		document.getElementById("bt1").onclick=function() {
+									const pn = document.getElementById("pname");
+									const qt = document.getElementById("qty");
+									const up = document.getElementById("price");
+									//assigning product details to array
+									products[index] = new Product(pn.value,+qt.value,+up.value);
+									index++;
+									pn.value="";	qt.value="";	up.value="";
+									pn.focus();
+								};
+	 
+		document.getElementById("bt2").onclick=function() {
+								let slno=1, pamt=0, billamt=0, gst=0, totalamt=0;
+
+								for( p of products )	//fetching 1-by-1 product object
+								{
+									pamt = p.qty*p.price;
+									document.write(`${slno} &nbsp;&nbsp; ${p.pname} &nbsp;&nbsp; ${p.qty} &nbsp;&nbsp; ${p.price} &nbsp;&nbsp; ${pamt} <br>`);
+									slno++;
+									billamt = billamt+pamt;
+								}
+								gst = billamt*0.12;
+								totalamt = billamt+gst;
+								document.write(`Bill Amount		:&#8377;${billamt} <br>`);
+								document.write(`GST Amount	:&#8377;${gst} <br>`);
+								document.write(`Total Bill Amount	:&#8377;${totalamt} <br>`);
+								document.write(`<br><button onclick="window.print()">Print Bill</button>`);
+							};
+ 	</script>
+
+	</div>
+		</center>
+ </body>
+</html>

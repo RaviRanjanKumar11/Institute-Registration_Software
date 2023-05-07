@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="https://e0.pxfuel.com/wallpapers/583/132/desktop-wallpaper-medical-logos-doctor-symbol.jpg">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <style>
+          body{
+               background-color: rgb(108, 143, 48);
+               background-image: url('https://media.nationalgeographic.org/assets/photos/569/648/2adb092b-1726-4e56-a0dd-30056756ddae_c158-0-1842-1333_r800x633.jpg?eff12d8bcc1b3653b5f5a0c5ed1619838922d9af');
+               background-repeat: no-repeat;
+	   background-attachment: fixed;
+	   background-size: 100% 100%;  
+          }
+          #ld{
+               text-shadow: 5px;
+               color: rgb(128, 34, 54);             
+          }
+          #btn{
+               color: red;
+             background-color:cyan;           
+          }
+          legend {
+  background-color: cyan;
+  color: red;
+  padding: 5px 10px;
+  }
+  #fd{
+   background-image:url('https://i.pinimg.com/originals/1f/7f/dd/1f7fdd78b67bf83cdb0ad02915b8b410.jpg');
+background-repeat: no-repeat;
+	   background-attachment: fixed;
+	   background-size: 100% 100%;
+height:530px;
+width:350px;
+}
+dt{
+color:blue;
+}
+i{
+color:red;
+}
+
+#btn:hover{
+background-color:yellow;
+transform:scale (1.8);
+}
+#tm{
+margin-top:-20px;
+color:red;
+}
+
+     </style>
+<title>Forward Jump</title>
+<script>
+var userDetails={
+     CardNumber:"12345",
+     Cvv:"9199",
+     Expiry:"2023"
+}
+function VerifyCard(){
+var card=document.getElementById("txtCard").value;
+if(card==userDetails.CardNumber)
+{
+
+     document.getElementById("txtCvv").disabled=false;
+     document.getElementById("txtCard").readOnly=true;
+  }
+}
+function VerifyCvv()
+{
+     var cvv=document.getElementById("txtCvv").value;
+     if(cvv==userDetails.Cvv)
+     {
+          document.getElementById("Expiry").disabled=false;
+          document.getElementById("txtCvv").readOnly=true;
+     }
+}
+function VerifyExpiry()
+{
+     var expiry=document.getElementById("Expiry").value;
+     if(expiry==userDetails.Expiry)
+     {
+          document.getElementById("btn").disabled=false;
+          document.getElementById("Expiry").readOnly=true;
+     }
+}
+
+
+//Time Local//
+setInterval(myTimer, 1000);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("tm").innerHTML = d.toLocaleTimeString();
+}	
+
+//copy paste not
+function stopOpe(win)
+{
+	 win.preventDefault();
+	 alert("sorry not allowed");
+	 }
+	 window.addEventListener("copy",stopOpe);
+	 window.addEventListener("paste",stopOpe);
+	 window.addEventListener("cut",stopOpe);
+	 window.addEventListener("contextmenu",stopOpe);		
+
+</script>
+</head>
+<body>
+<center>
+<fieldset id="fd">
+<legend id="ld"><img src="https://www.designfreelogoonline.com/wp-content/uploads/2019/10/00236-medical-02.png" alt="mlog"  id="img1"style="width:42px;height:36px;">Shiva Payment<a href="login.html"><i class="fa fa-home fa-beat" style="--fa-beat-scale: 2.0;" aria-hidden="true"></i></a></legend>
+<dl>
+&nbsp;<label id="tm" ></label>
+<strong><dt>Card Number</dt></strong>
+<dd><i class="fa fa-credit-card" aria-hidden="true"></i><Input type="text" onkeyup="VerifyCard()" id="txtCard"></dd>
+&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cc-visa fa-flip" style="font-size:32px"></i>&nbsp;<i class="fa fa-cc-paypal fa-flip" style="font-size:32px"></i>&nbsp;<i class="fa fa-cc-mastercard fa-flip" style="font-size:32px"></i>&nbsp;<i class="fa fa-cc-amex fa-flip" style="font-size:32px"></i>&nbsp;<i class="fa fa-cc-paypal fa-flip" style="font-size:32px"></i>
+  <strong>   <dt>CVV</dt></strong>
+     <dd><i class="fa fa-key fa-shake" aria-hidden="true"></i><input disabled type="text" onkeyup="VerifyCvv()" id="txtCvv" size="6"></dd>
+   <strong><dt>Expiry</dt></strong>
+<dd>  
+ <i class="fa fa-calendar fa-beat-fade" aria-hidden="true"></i>    <select  onchange="VerifyExpiry()" disabled id="Expiry">
+          <option>2020</option>
+          <option>2021</option>
+       <option>2022</option>
+        <option>2023</option>
+        <option>2024</option>
+     </select>
+     </dd>
+     </dl>
+     <button  id="btn">Pay</button>&nbsp; &nbsp;<button onclick="window.print()" id="btn">Print</button>
+     <dt><img src="https://c0.wallpaperflare.com/preview/360/533/202/health-medical-healthcare-health.jpg" alt="mlog"  id="img1"style="width:52px;height:46px;"><i class="fa fa-inr fa-flip" aria-hidden="true"></i>Pay to shivaMedical</dt>
+</fieldset>
+</center>
+</body>
+</html>

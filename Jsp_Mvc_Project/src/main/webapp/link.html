@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="https://e0.pxfuel.com/wallpapers/583/132/desktop-wallpaper-medical-logos-doctor-symbol.jpg">
+<style> 
+body{
+background-image: url('https://png.pngtree.com/background/20211217/original/pngtree-health-care-blue-cross-light-effect-background-picture-image_1590823.jpg');
+background-repeat: no-repeat;
+	   background-attachment: fixed;
+	   background-size: 100% 100%;      
+}
+a{
+color:red;
+}
+#fd{
+height:412px;
+width:240px;
+}
+legend {
+  background-color: red;
+  color: red;
+  padding: 5px 10px;
+}
+i{
+color:green;
+}
+a{
+color:red;
+}
+#ik{
+float:right;
+}
+i:hover {
+  		transform: scale(1.8);	
+  			
+	}
+	a:hover {
+  		transform: scale(2.0);	
+  		background-color: blue; 	
+	}
+	#fd:hover{
+	transform: scale(1.4);
+	}
+	
+</style>
+</head>
+<body bgcolor=GoldenRod text=pink>
+
+<center>
+<br><br>
+<fieldset id="fd">
+<legend><i class="fa-solid fa-laptop-medical"></i> &nbsp;</legend>
+<b>
+<a href="Employee.html"><i class="fa fa-address-book fa-flip" aria-hidden="true" ></i>AddPatient</a><br>
+<a href="code"><i class="fa-sharp fa-solid fa-hospital-user fa-flip"></i>ViewBy Serial no.</a><br>
+<a href="view"><i class="fa fa-street-view fa-flip" aria-hidden="true"></i>ViewPatient</a><br>
+<a href="logout"><i class="fa fa-sign-out fa-flip" aria-hidden="true"></i>Logout</a><br>
+<a href="billgen.html"><i class="fa-solid fa-laptop-medical fa-flip"></i>Medicine Bill</a><br>
+<a href="desk.html"><i class="fa-solid fa-house-medical-flag fa-flip"></i>Shiva Feeds</a><br>
+<a href="Payment.html"><i class="fa fa-money fa-flip" aria-hidden="true"></i> Pay</a></br>
+<a href="status.html"><i class="fa fa-medkit fa-flip" aria-hidden="true"></i>Status</a><br>
+<a href="loan.html"><i class="fa fa-inr fa-flip" aria-hidden="true"></i>Loan.</a>
+</b>
+</fieldset>
+</center>
+
+<script>
+function stopOpe(win)
+{
+	 win.preventDefault();
+	 alert("sorry not allowed");
+	 }
+	 window.addEventListener("copy",stopOpe);
+	 window.addEventListener("paste",stopOpe);
+	 window.addEventListener("cut",stopOpe);
+	 window.addEventListener("contextmenu",stopOpe);		
+	 
+</script>
+
+</body>
+</html>
